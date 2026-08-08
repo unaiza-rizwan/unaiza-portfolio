@@ -4,7 +4,9 @@ try {
   // 1. Particle Mesh Background
   if (!isReducedMotion) {
     const canvas = document.getElementById('particles-canvas');
+    if (!canvas) throw new Error('Particle canvas not found');
     const ctx = canvas.getContext('2d');
+    if (!ctx) throw new Error('Canvas 2D context unavailable');
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
 
@@ -67,7 +69,7 @@ try {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(168, 85, 247, ${0.12 - dist / 1100})`;
+            ctx.strokeStyle = `rgba(168, 85, 247, ${Math.max(0, 0.12 - dist / 1100)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -79,7 +81,7 @@ try {
   }
 
   // 2. Interactive Tilt Cards
-  if (!isReducedMotion) {
+  if (!isReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     const tiltCards = document.querySelectorAll('.tilt-card, .card');
     tiltCards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
@@ -102,7 +104,7 @@ try {
   }
 
   // 3. Magnetic Hover Effect on Buttons
-  if (!isReducedMotion) {
+  if (!isReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     const magneticBtns = document.querySelectorAll('.magnetic-btn');
     magneticBtns.forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
