@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unaiza Rizwan Ali — Software Engineering Student | Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animated Background Aura Blobs -->
+<div class="aura-container">
+  <div class="aura-blob aura-1"></div>
+  <div class="aura-blob aura-2"></div>
+  <div class="aura-blob aura-3"></div>
+</div>
+
+<!-- Particle Overlay Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<script>
+  document.documentElement.classList.add('js-ready');
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('reduced-motion');
+  }
+</script>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">
+      <span class="status-dot"></span>
+      <span>UNAIZA.DEV</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#freelance">Freelance</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://github.com/unaiza-rizwan" class="nav-cta magnetic-btn" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="badge-pill reveal">
+        <span>Open to Internships & Freelance · Karachi, Pakistan</span>
+      </div>
+       <h1 class="reveal">
+        I build software people can <span class="text-gradient">actually rely on.</span>
+      </h1>
+      <p class="lead reveal">
+        Hi, I'm Unaiza Rizwan Ali — a full-stack developer who takes projects from database schema to a polished, working interface. I build role-based platforms, e-commerce systems, and responsive apps with ASP.NET Core, PHP, React, and SQL — for teams hiring, and clients building.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#work" class="btn-primary magnetic-btn">Explore Featured Projects →</a>
+        <a href="https://github.com/unaiza-rizwan" class="btn-secondary magnetic-btn" target="_blank" rel="noopener">View GitHub Profile ↗</a>
+      
+      </div>
+
+      <!-- Architecture Cards -->
+      <div class="architecture-grid reveal-stagger">
+        <div class="arch-card tilt-card">
+          <span class="layer-tag">Interface Layer</span>
+          <h3>Frontend Systems</h3>
+          <p>Building responsive, accessible interfaces with React, Bootstrap 5, JavaScript (ES6+), and modern CSS frameworks.</p>
+        </div>
+        <div class="arch-card tilt-card">
+          <span class="layer-tag">Business Logic</span>
+          <h3>Backend Core</h3>
+          <p>Architecting secure controllers, authenticated routing, and business logic using ASP.NET Core MVC and PHP.</p>
+        </div>
+        <div class="arch-card tilt-card">
+          <span class="layer-tag">Data Layer</span>
+          <h3>Database Engineering</h3>
+          <p>Designing structured relational models and ORM mappings with SQL Server, MySQL, and EF Core.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-eyebrow">About Me</span>
+          <h2 style="margin-bottom: 20px;">I build things end-to-end, not just pieces of them.</h2>
+          <p>
+            I'm a <strong>Software Engineering student</strong> at Aptech Learning Pakistan who builds full-stack web applications from database schema to a finished, responsive interface. My work centers on role-based platforms, e-commerce systems, and data flows built to hold up under real use — not just tutorials.
+          </p>
+          <p>
+            During my remote <strong>Web Developer Internship at NovaStackHub</strong>, I shipped two live frontend features working independently against real deadlines — good practice for both a team environment and freelance client work.
+          </p>
+          <p>
+            I'm currently expanding into the <strong>MERN stack</strong> (MongoDB, Express, React, Node.js) to build modern, end-to-end JavaScript applications. Whether you're hiring for a team or need a project built from the ground up, I bring clear communication and code meant to be maintained — not just shipped.
+          </p>
+        </div>
+        
+        <div class="fact-card tilt-card reveal">
+          <ul class="fact-list">
+            <li><span class="label">Location</span><span class="value">Karachi, Pakistan</span></li>
+            <li><span class="label">Education</span><span class="value">Software Engineering Diploma</span></li>
+            <li><span class="label">Institution</span><span class="value">Aptech Learning Pakistan</span></li>
+            <li><span class="label">Graduation</span><span class="value">Expected 2027</span></li>
+            <li><span class="label">Internship</span><span class="value">NovaStackHub (Jun–Jul 2026)</span></li>
+            <li><span class="label">Availability</span><span class="value">Internships & Freelance</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">Technical Capabilities</span>
+        <h2>Skills & Technologies</h2>
+        <p>A comprehensive overview of tools and technologies I utilize across full-stack applications.</p>
+      </div>
+
+      <div class="skills-grid reveal-stagger">
+        <div class="skill-card tilt-card">
+          <span class="num mono">01</span>
+          <h3>Frontend</h3>
+          <div class="chip-row">
+            <span class="chip">HTML5 / CSS3</span>
+            <span class="chip">JavaScript (ES6+)</span>
+            <span class="chip">Bootstrap 5</span>
+            <span class="chip">React.js (Learning)</span>
+            <span class="chip">Material UI (Learning)</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <span class="num mono">02</span>
+          <h3>Backend</h3>
+          <div class="chip-row">
+            <span class="chip">ASP.NET Core MVC</span>
+            <span class="chip">PHP</span>
+            <span class="chip">ASP.NET Identity</span>
+            <span class="chip">EF Core</span>
+            <span class="chip">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <span class="num mono">03</span>
+          <h3>Databases</h3>
+          <div class="chip-row">
+            <span class="chip">SQL Server</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Relational Modeling</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <span class="num mono">04</span>
+          <h3>Mobile</h3>
+          <div class="chip-row">
+            <span class="chip">Flutter</span>
+            <span class="chip">Cross-Platform UI</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <span class="num mono">05</span>
+          <h3>Developer Tools</h3>
+          <div class="chip-row">
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">Visual Studio</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">SSMS</span>
+          </div>
+        </div>
+
+        <div class="skill-card tilt-card">
+          <span class="num mono">06</span>
+          <h3>Active Learning</h3>
+          <div class="chip-row">
+            <span class="chip">MERN Stack</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Express.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">Portfolio Work</span>
+        <h2>Featured Projects</h2>
+        <p>A selection of web applications, platforms, and interactive interfaces I have engineered.</p>
+        <p class="project-note mono">Source code available on GitHub · Live demos coming as projects are deployed</p>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack & Backend</button>
+        <button class="filter-btn" data-filter="frontend">Frontend & UI</button>
+      </div>
+
+      <div class="project-grid reveal-stagger">
+
+        <div class="card tilt-card cat-fullstack" data-cat="fullstack">
+          <div class="card-header">
+            <h3>FoodSaver Platform</h3>
+            <span class="card-tag fullstack">Full-Stack</span>
+          </div>
+          <p class="desc">A surplus food redistribution web app with distinct dashboards for Admins, Donors, NGOs, and Volunteers. Includes secure identity authentication and real-time donation tracking.</p>
+          <div class="stack">
+            <span>ASP.NET Core MVC</span><span>SQL Server</span><span>EF Core</span><span>Bootstrap</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/foodsaver-platform" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card tilt-card cat-fullstack" data-cat="fullstack">
+          <div class="card-header">
+            <h3>Career Guidance System</h3>
+            <span class="card-tag fullstack">Full-Stack</span>
+          </div>
+          <p class="desc">An online career portal for students featuring mentor evaluation tools, assessment modules, and personalized career path generation based on student profiles.</p>
+          <div class="stack">
+            <span>ASP.NET Core MVC</span><span>SQL Server</span><span>Bootstrap</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/career-guidance-platform" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card tilt-card cat-fullstack" data-cat="fullstack">
+          <div class="card-header">
+            <h3>E-Book Store Application</h3>
+            <span class="card-tag fullstack">Full-Stack</span>
+          </div>
+          <p class="desc">A complete digital bookstore with user authentication, catalog category filtering, cart management, and administrative order handling backed by a MySQL database.</p>
+          <div class="stack">
+            <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/ebook-system" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card tilt-card cat-frontend" data-cat="frontend">
+          <div class="card-header">
+            <h3>Real-Time Weather App</h3>
+            <span class="card-tag frontend">Frontend</span>
+          </div>
+          <p class="desc">Dynamic weather interface fetching live meteorological data from external REST APIs with multi-city search functionality and responsive forecast displays.</p>
+          <div class="stack">
+            <span>JavaScript (ES6+)</span><span>REST API</span><span>CSS3</span><span>HTML5</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/weather-app" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card tilt-card cat-frontend" data-cat="frontend">
+          <div class="card-header">
+            <h3>Event Countdown Utility</h3>
+            <span class="card-tag frontend">Frontend</span>
+          </div>
+          <p class="desc">An interactive countdown application focused on high-precision time calculations, custom target settings, and clean state manipulation using raw DOM methods.</p>
+          <div class="stack">
+            <span>JavaScript</span><span>DOM API</span><span>CSS Grid</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/countdown-timer" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card tilt-card cat-frontend" data-cat="frontend">
+          <div class="card-header">
+            <h3>Interactive Gaming Portal</h3>
+            <span class="card-tag frontend">Frontend</span>
+          </div>
+          <p class="desc">A modern media web layout featuring interactive gaming showcase components, fluid animations, and high-density content structure.</p>
+          <div class="stack">
+            <span>HTML5</span><span>CSS Flexbox</span><span>Bootstrap 5</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/tangoline-gaming-website" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+          
+         <div class="card tilt-card cat-frontend" data-cat="frontend">
+          <div class="card-header">
+            <h3>Amusement Park Experience</h3>
+            <span class="card-tag frontend">Frontend</span>
+          </div>
+          <p class="desc">A multi-page responsive website for an amusement park, featuring modern navigation patterns and layouts that adapt cleanly across every screen size.</p>
+          <div class="stack">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap 5</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/unaiza-rizwan/merciado-amusement-park" target="_blank" rel="noopener" aria-label="View project source code on GitHub">View Source Code ↗</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FREELANCE & CONTACT SECTION -->
+  <section id="freelance">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">Client Services</span>
+        <h2>Freelance & Contracting</h2>
+        <p>Providing custom web development solutions built to your exact specifications.</p>
+      </div>
+
+      <div class="services-grid reveal-stagger">
+        <div class="service-card tilt-card">
+          <span class="mono">01</span>
+          <h4>Responsive Websites</h4>
+          <p>Custom, mobile-ready websites and marketing pages optimized for speed and clarity.</p>
+        </div>
+        <div class="service-card tilt-card">
+          <span class="mono">02</span>
+          <h4>Web Applications</h4>
+          <p>Full-stack web applications with authentication, user roles, and business workflows.</p>
+        </div>
+        <div class="service-card tilt-card">
+          <span class="mono">03</span>
+          <h4>Database Design</h4>
+          <p>Clean SQL data architecture, relational schema optimization, and ORM integrations.</p>
+        </div>
+        <div class="service-card tilt-card">
+          <span class="mono">04</span>
+          <h4>UI Modernization</h4>
+          <p>Refactoring existing design layouts into modern, clean Bootstrap or React components.</p>
+        </div>
+      </div>
+
+      <!-- INQUIRY FORM -->
+      <div class="freelance-box reveal">
+        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px;">Start a Project</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 15px;">
+          Have a project in mind? Send your requirements below and I will respond within 24 hours.
+        </p>
+
+        <form id="project-form" class="project-form" action="https://formspree.io/f/mgognppj" method="POST">
+          <div class="form-row">
+            <label for="pf-name">Your Name</label>
+            <input id="pf-name" name="name" type="text" required placeholder="e.g. Sarah Jenkins">
+          </div>
+          <div class="form-row">
+            <label for="pf-email">Email Address</label>
+            <input id="pf-email" name="email" type="email" required placeholder="sarah@example.com">
+          </div>
+          <div class="form-row full">
+            <label for="pf-type">Service Required</label>
+            <select id="pf-type" name="project_type">
+              <option>Full-Stack Web Application</option>
+              <option>Responsive Website Development</option>
+              <option>Database Modeling & SQL</option>
+              <option>Frontend UI Modernization</option>
+              <option>Other Custom Solution</option>
+            </select>
+          </div>
+          <div class="form-row full">
+            <label for="pf-message">Project Overview</label>
+            <textarea id="pf-message" name="message" rows="4" required placeholder="Briefly describe what you're looking to build..."></textarea>
+          </div>
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" class="btn-primary magnetic-btn" id="pf-submit" style="border: none; cursor: pointer; grid-column: 1 / -1; justify-self: start;">
+            Submit Project Brief →
+          </button>
+          <p class="form-status mono" id="pf-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-inner reveal">
+        <div>
+          <span class="section-eyebrow">Get in Touch</span>
+          <h2>Let's build something scalable together.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:unaizaali888@gmail.com">✉ unaizaali888@gmail.com</a>
+          <a href="tel:+923708753072">☎ +92 370 8753072</a>
+          <a href="https://linkedin.com/in/unaiza-rizwan-ali-1b57772b7/" target="_blank" rel="noopener">↗ LinkedIn Profile</a>
+          <a href="https://github.com/unaiza-rizwan" target="_blank" rel="noopener">↗ GitHub Profile</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Unaiza Rizwan Ali. All rights reserved.</span>
+        <span>Karachi, Pakistan</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
