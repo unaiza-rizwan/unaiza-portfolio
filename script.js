@@ -4,9 +4,7 @@ try {
   // 1. Particle Mesh Background
   if (!isReducedMotion) {
     const canvas = document.getElementById('particles-canvas');
-    if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
     let width = canvas.width = window.innerWidth;
     let height = canvas.height = window.innerHeight;
 
@@ -69,7 +67,7 @@ try {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(168, 85, 247, ${Math.max(0, 0.12 - dist / 1100)})`;
+            ctx.strokeStyle = `rgba(168, 85, 247, ${0.12 - dist / 1100})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -81,7 +79,7 @@ try {
   }
 
   // 2. Interactive Tilt Cards
-  if (!isReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  if (!isReducedMotion) {
     const tiltCards = document.querySelectorAll('.tilt-card, .card');
     tiltCards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
@@ -104,7 +102,7 @@ try {
   }
 
   // 3. Magnetic Hover Effect on Buttons
-  if (!isReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  if (!isReducedMotion) {
     const magneticBtns = document.querySelectorAll('.magnetic-btn');
     magneticBtns.forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
@@ -183,6 +181,10 @@ try {
     });
   }
 
+  // Enable reveal animations only after JavaScript has initialized successfully.
+  // If this script fails or is blocked, the CSS fallback keeps all content visible.
+  document.documentElement.classList.add('animate-ready');
+
   // 6. Scroll Reveal Observer
   const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
   if ('IntersectionObserver' in window) {
@@ -206,7 +208,7 @@ try {
   });
 
 } catch (e) {
-  document.documentElement.classList.remove('js-ready');
+  document.documentElement.classList.remove('animate-ready');
   console.error('Portfolio initialization error:', e);
 }
 
