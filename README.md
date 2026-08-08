@@ -15,28 +15,24 @@ Personal portfolio website of **Unaiza Rizwan Ali**, a Software Engineering stud
 - Formspree
 - Vercel
 
-## 📂 Featured Projects
+## 📂 Projects
 
-The portfolio showcases web applications and projects built using different frontend and backend technologies.
-
-Project source code is available through the GitHub links provided on the portfolio.
-
-> Individual project live demos will be added as the projects are deployed.
+Project source-code links are available inside the portfolio. Individual project live demos will be added as the projects are deployed.
 
 ## ✨ Features
 
 - Responsive design
 - Modern dark UI
 - Interactive project filtering
-- Animated sections
+- Animated sections with a safe non-JavaScript fallback
 - Skills and technology showcase
 - Contact form
 - GitHub project links
-- Mobile-friendly layout
 
 ## 💻 Run Locally
 
-1. Clone the repository:
+Open `index.html` in a browser, or use VS Code Live Server.
 
-```bash
-git clone https://github.com/unaiza-rizwan/unaiza-portfolio.git
+## 🚀 Deployment
+
+This is a static HTML, CSS, and JavaScript website deployed using Vercel.
