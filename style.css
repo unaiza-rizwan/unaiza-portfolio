@@ -88,7 +88,7 @@
   .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
   /* Scroll-Reveal Animations */
-  html.js-ready:not(.reduced-motion) .reveal {
+  html.animate-ready:not(.reduced-motion) .reveal {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
   }
@@ -97,7 +97,7 @@
   }
   .reveal.in-view { opacity: 1; transform: translateY(0) scale(1); }
   
-  html.js-ready:not(.reduced-motion) .reveal-stagger > * {
+  html.animate-ready:not(.reduced-motion) .reveal-stagger > * {
     opacity: 0; transform: translateY(24px) scale(0.97);
     transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -416,88 +416,8 @@
     #particles-canvas { display: none; }
   }
 
-
-/* ---------- ACCESSIBILITY & FINAL POLISH ---------- */
-:focus-visible {
-  outline: 2px solid var(--accent-blue);
-  outline-offset: 4px;
+/* Safe fallback: content must remain readable even if JavaScript/animations are unavailable. */
+.reveal, .reveal-stagger > * {
+  will-change: opacity, transform;
 }
 
-.project-note {
-  margin-top: -38px;
-  margin-bottom: 34px;
-  color: var(--text-muted);
-  font-size: 11px;
-  letter-spacing: 0.02em;
-}
-
-.card-links a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  background: currentColor;
-  transition: width 0.25s ease;
-}
-
-.card-links a:hover::after {
-  width: 100%;
-}
-
-.nav-cta {
-  white-space: nowrap;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding-top: 140px;
-    padding-bottom: 70px;
-  }
-
-  section {
-    padding: 80px 0;
-  }
-
-  .wrap {
-    padding: 0 18px;
-  }
-
-  .architecture-grid {
-    margin-top: 55px;
-  }
-
-  .card,
-  .skill-card,
-  .arch-card,
-  .fact-card {
-    padding: 24px;
-  }
-
-  .freelance-box {
-    padding: 28px 20px;
-  }
-
-  .hero-actions {
-    width: 100%;
-  }
-
-  .hero-actions .btn-primary,
-  .hero-actions .btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .project-note {
-    margin-top: -28px;
-    margin-bottom: 28px;
-    line-height: 1.6;
-  }
-
-  .card-header {
-    flex-direction: column;
-  }
-
-  .card-tag {
-    align-self: flex-start;
-  }
-}
