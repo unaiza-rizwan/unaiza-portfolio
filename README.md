@@ -1,19 +1,42 @@
 # Unaiza Rizwan Ali — Portfolio
 
-Personal portfolio website for Unaiza Rizwan Ali.
+Personal portfolio website of **Unaiza Rizwan Ali**, a Software Engineering student and Full-Stack Web Developer.
 
-## Tech
+## 🌐 Live Portfolio
+
+[Visit My Portfolio](https://unaiza-portfolio-tawny.vercel.app/)
+
+## 🛠️ Tech Stack
+
 - HTML5
 - CSS3
 - JavaScript (ES6+)
+- Responsive Web Design
+- Formspree
+- Vercel
+
+## 📂 Featured Projects
+
+The portfolio showcases web applications and projects built using different frontend and backend technologies.
+
+Project source code is available through the GitHub links provided on the portfolio.
+
+> Individual project live demos will be added as the projects are deployed.
+
+## ✨ Features
+
 - Responsive design
-- Formspree contact form
+- Modern dark UI
+- Interactive project filtering
+- Animated sections
+- Skills and technology showcase
+- Contact form
+- GitHub project links
+- Mobile-friendly layout
 
-## Projects
-Project source-code links are available inside the portfolio. Live demo links are intentionally not included because the projects have not been deployed yet.
+## 💻 Run Locally
 
-## Run locally
-Open `index.html` in a browser, or use VS Code Live Server.
+1. Clone the repository:
 
-## Deploy
-This is a static website and can be deployed directly to Vercel without a build command.
+```bash
+git clone https://github.com/unaiza-rizwan/unaiza-portfolio.git
